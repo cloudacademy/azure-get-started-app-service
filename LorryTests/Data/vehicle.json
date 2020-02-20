@@ -1,0 +1,26 @@
+  [
+    {
+      "id": -1,
+      "Name": "Herbie",
+      "Make": "VW",
+      "Model": "Bettle",
+      "License": "JUICE",
+      "Year": 1967
+    },
+    {
+      "id": -1,
+      "Name": "Beast",
+      "Make": "Ford",
+      "Model": "Falcon XB Coupe",
+      "License": "MadMax",
+      "Year": 1974
+    },
+    {
+      "id": -1,
+      "Name": "Ewete",
+      "Make": "Nissan",
+      "Model": "Navara",
+      "License": "Sheep",
+      "Year": 2014
+    }
+  ]

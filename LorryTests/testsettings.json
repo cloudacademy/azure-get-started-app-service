@@ -1,0 +1,8 @@
+{
+  "ConnectionStrings": {
+    "LorryLogAPIContext": "Server=localhost;Database=LorryLog;User ID=lorries;Password=iamreallyatruck;MultipleActiveResultSets=true"
+  },
+  "TestFiles": {
+    "vehicle": "\\Debug\\netcoreapp3.1\\Data\\vehicle.json"
+  }
+}

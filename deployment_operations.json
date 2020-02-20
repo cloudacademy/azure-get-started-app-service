@@ -1,0 +1,67 @@
+[
+  {
+    "id": "/subscriptions/696edd63-e38a-4b28-bf75-6679c0073089/resourceGroups/Default-Web-AustraliaSoutheast/providers/Microsoft.Resources/deployments/Microsoft.Web-WebApp-Portal-c6acd555-809d/operations/E1ABECB83B9D70AE",
+    "operationId": "E1ABECB83B9D70AE",
+    "properties": {
+      "provisioningOperation": "Create",
+      "provisioningState": "Succeeded",
+      "timestamp": "2020-02-19T23:40:53.3522106Z",
+      "duration": "PT22.6866075S",
+      "trackingId": "64d54427-d763-4374-9f8e-4306ddc42902",
+      "statusCode": "OK",
+      "targetResource": {
+        "id": "/subscriptions/696edd63-e38a-4b28-bf75-6679c0073089/resourceGroups/Default-Web-AustraliaSoutheast/providers/Microsoft.Web/sites/lorrylogadmin",
+        "resourceType": "Microsoft.Web/sites",
+        "resourceName": "lorrylogadmin"
+      }
+    }
+  },
+  {
+    "id": "/subscriptions/696edd63-e38a-4b28-bf75-6679c0073089/resourceGroups/Default-Web-AustraliaSoutheast/providers/Microsoft.Resources/deployments/Microsoft.Web-WebApp-Portal-c6acd555-809d/operations/38A0E79B93E68B5C",
+    "operationId": "38A0E79B93E68B5C",
+    "properties": {
+      "provisioningOperation": "Read",
+      "provisioningState": "Succeeded",
+      "timestamp": "2020-02-19T23:40:30.6114114Z",
+      "duration": "PT0.3745035S",
+      "trackingId": "695f1ea7-9b2f-46ba-a24c-583e3564f34a",
+      "statusCode": "OK",
+      "targetResource": {
+        "id": "/subscriptions/696edd63-e38a-4b28-bf75-6679c0073089/resourceGroups/Default-Web-AustraliaSoutheast/providers/microsoft.insights/components/lorrylogadmin",
+        "resourceType": "microsoft.insights/components",
+        "resourceName": "lorrylogadmin",
+        "apiVersion": "2015-05-01"
+      }
+    }
+  },
+  {
+    "id": "/subscriptions/696edd63-e38a-4b28-bf75-6679c0073089/resourceGroups/Default-Web-AustraliaSoutheast/providers/Microsoft.Resources/deployments/Microsoft.Web-WebApp-Portal-c6acd555-809d/operations/261B66E212D40040",
+    "operationId": "261B66E212D40040",
+    "properties": {
+      "provisioningOperation": "Create",
+      "provisioningState": "Succeeded",
+      "timestamp": "2020-02-19T23:40:30.2060301Z",
+      "duration": "PT6.5911263S",
+      "trackingId": "8a906460-798e-4f40-b229-da0df50b268c",
+      "statusCode": "OK",
+      "targetResource": {
+        "id": "/subscriptions/696edd63-e38a-4b28-bf75-6679c0073089/resourceGroups/Default-Web-AustraliaSoutheast/providers/microsoft.insights/components/lorrylogadmin",
+        "resourceType": "microsoft.insights/components",
+        "resourceName": "lorrylogadmin"
+      }
+    }
+  },
+  {
+    "id": "/subscriptions/696edd63-e38a-4b28-bf75-6679c0073089/resourceGroups/Default-Web-AustraliaSoutheast/providers/Microsoft.Resources/deployments/Microsoft.Web-WebApp-Portal-c6acd555-809d/operations/08586194512625508131",
+    "operationId": "08586194512625508131",
+    "properties": {
+      "provisioningOperation": "EvaluateDeploymentOutput",
+      "provisioningState": "Succeeded",
+      "timestamp": "2020-02-19T23:40:53.443092Z",
+      "duration": "PT0.0625719S",
+      "trackingId": "5d44ae9d-ef82-4a85-8250-48310589c21a",
+      "statusCode": "OK",
+      "statusMessage": null
+    }
+  }
+]

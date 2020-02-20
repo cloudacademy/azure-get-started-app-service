@@ -1,0 +1,111 @@
+{
+  "id": "/subscriptions/696edd63-e38a-4b28-bf75-6679c0073089/resourceGroups/Default-Web-AustraliaSoutheast/providers/Microsoft.Resources/deployments/Microsoft.Web-WebApp-Portal-c6acd555-809d",
+  "name": "Microsoft.Web-WebApp-Portal-c6acd555-809d",
+  "type": "Microsoft.Resources/deployments",
+  "tags": {
+    "primaryResourceId": "/subscriptions/696edd63-e38a-4b28-bf75-6679c0073089/resourcegroups/Default-Web-AustraliaSoutheast/providers/Microsoft.Web/sites/lorrylogadmin",
+    "marketplaceItemId": "Microsoft.WebSite"
+  },
+  "properties": {
+    "templateHash": "1290601713462045382",
+    "parameters": {
+      "subscriptionId": {
+        "type": "String",
+        "value": "696edd63-e38a-4b28-bf75-6679c0073089"
+      },
+      "name": {
+        "type": "String",
+        "value": "lorrylogadmin"
+      },
+      "location": {
+        "type": "String",
+        "value": "Australia Southeast"
+      },
+      "hostingEnvironment": {
+        "type": "String",
+        "value": ""
+      },
+      "hostingPlanName": {
+        "type": "String",
+        "value": "LorryLogAPI20200219015450Plan"
+      },
+      "serverFarmResourceGroup": {
+        "type": "String",
+        "value": "Default-Web-AustraliaSoutheast"
+      },
+      "alwaysOn": {
+        "type": "Bool",
+        "value": false
+      },
+      "currentStack": {
+        "type": "String",
+        "value": "dotnetcore"
+      },
+      "errorLink": {
+        "type": "String",
+        "value": "https://lorrylogadmin.scm.azurewebsites.net/detectors"
+      }
+    },
+    "mode": "Incremental",
+    "debugSetting": {
+      "detailLevel": "None"
+    },
+    "provisioningState": "Succeeded",
+    "timestamp": "2020-02-19T23:40:53.4676797Z",
+    "duration": "PT30.5408572S",
+    "correlationId": "011b4d5b-be81-44e5-88d1-06f3b1d6013e",
+    "providers": [
+      {
+        "namespace": "Microsoft.Web",
+        "resourceTypes": [
+          {
+            "resourceType": "sites",
+            "locations": [
+              "australiasoutheast"
+            ]
+          }
+        ]
+      },
+      {
+        "namespace": "microsoft.insights",
+        "resourceTypes": [
+          {
+            "resourceType": "components",
+            "locations": [
+              "australiasoutheast"
+            ]
+          }
+        ]
+      }
+    ],
+    "dependencies": [
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/696edd63-e38a-4b28-bf75-6679c0073089/resourceGroups/Default-Web-AustraliaSoutheast/providers/microsoft.insights/components/lorrylogadmin",
+            "resourceType": "microsoft.insights/components",
+            "resourceName": "lorrylogadmin"
+          },
+          {
+            "id": "/subscriptions/696edd63-e38a-4b28-bf75-6679c0073089/resourceGroups/Default-Web-AustraliaSoutheast/providers/microsoft.insights/components/lorrylogadmin",
+            "resourceType": "microsoft.insights/components",
+            "resourceName": "lorrylogadmin",
+            "apiVersion": "2015-05-01"
+          }
+        ],
+        "id": "/subscriptions/696edd63-e38a-4b28-bf75-6679c0073089/resourceGroups/Default-Web-AustraliaSoutheast/providers/Microsoft.Web/sites/lorrylogadmin",
+        "resourceType": "Microsoft.Web/sites",
+        "resourceName": "lorrylogadmin"
+      }
+    ],
+    "outputResources": [
+      {
+        "id": "/subscriptions/696edd63-e38a-4b28-bf75-6679c0073089/resourceGroups/Default-Web-AustraliaSoutheast/providers/microsoft.insights/components/lorrylogadmin"
+      },
+      {
+        "id": "/subscriptions/696edd63-e38a-4b28-bf75-6679c0073089/resourceGroups/Default-Web-AustraliaSoutheast/providers/Microsoft.Web/sites/lorrylogadmin"
+      }
+    ],
+    "validationLevel": "Template"
+  }
+}
