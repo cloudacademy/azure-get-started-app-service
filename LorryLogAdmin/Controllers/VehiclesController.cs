@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using LorryLogAdmin.Data;
 using LorryModels;
 using System.Net.Http;
 using Microsoft.Extensions.Configuration;
