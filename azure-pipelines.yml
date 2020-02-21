@@ -14,6 +14,7 @@ pool:
 
 variables:
   solution: '**/*.sln'
+  project: '**/LorryLogAdmin/LorryLogAdmin.csproj'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Development'
 
@@ -31,10 +32,11 @@ steps:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
 
-- task: VSTest@2
+- task: DotNetCoreCLI@2
   inputs:
-    platform: '$(buildPlatform)'
-    configuration: '$(buildConfiguration)'
+    command: 'build'
+    projects: '$(project)'
+
 
 - task: AzureWebApp@1
   inputs:
