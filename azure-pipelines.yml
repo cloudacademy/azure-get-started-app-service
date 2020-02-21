@@ -38,5 +38,11 @@ steps:
     arguments: '--output $(Build.ArtifactStagingDirectory)'
     zipAfterPublish: True
 
-
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    azureSubscription: 'LorryLogAdminServiceConnection'
+    appType: 'webApp'
+    WebAppName: 'lorrylogadmin'
+    packageForLinux: '$(Build.ArtifactStagingDirectory)/**/*.zip'
 
