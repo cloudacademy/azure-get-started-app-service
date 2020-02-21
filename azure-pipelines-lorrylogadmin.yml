@@ -35,7 +35,7 @@ steps:
     command: publish
     publishWebProjects: false
     projects: '$(project)'    
-    arguments: '--output $(Build.ArtifactStagingDirectory)'
+    arguments: '--output admin_output'
     zipAfterPublish: True
 
 - task: AzureRmWebAppDeployment@4
@@ -44,5 +44,5 @@ steps:
     azureSubscription: 'LorryLogAdminServiceConnection'
     appType: 'webApp'
     WebAppName: 'lorrylogadmin'
-    packageForLinux: '$(Build.ArtifactStagingDirectory)/**/*.zip'
+    packageForLinux: '$(Build.DefaultWorkingDirectory)/admin_output/*.zip'
 
