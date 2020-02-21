@@ -3,15 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LorryLogAPI", "TrackAPI\LorryLogAPI.csproj", "{88D3B1C9-7B8E-422D-929B-01E1593540BF}"
-EndProject
 Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "LorryLog", "LorryLog\LorryLog.sqlproj", "{7FDAEFF8-FB2D-4AEA-B407-DE11C9D1B666}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LorryModels", "LorryModels\LorryModels.csproj", "{BDBC659F-2ED1-4489-A56D-C6209444BE78}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LorryTests", "LorryTests\LorryTests.csproj", "{18C6FF4F-32EB-4745-AE6F-270DDA6BDED2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LorryLogAdmin", "LorryLogAdmin\LorryLogAdmin.csproj", "{C9B0D50F-C92A-4243-A39C-3452B1402329}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LorryLogAdmin", "LorryLogAdmin\LorryLogAdmin.csproj", "{C9B0D50F-C92A-4243-A39C-3452B1402329}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LorryLogAPI", "LorryLogAPI\LorryLogAPI.csproj", "{866631E8-3824-424B-9A09-6521724814F2}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B820AD94-F511-49C3-A6C6-385856D905D8}"
+	ProjectSection(SolutionItems) = preProject
+		azure-pipelines-lorrylogadmin.yml = azure-pipelines-lorrylogadmin.yml
+		azure-pipelines-lorrylogapi.yml = azure-pipelines-lorrylogapi.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +25,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{88D3B1C9-7B8E-422D-929B-01E1593540BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{88D3B1C9-7B8E-422D-929B-01E1593540BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{88D3B1C9-7B8E-422D-929B-01E1593540BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{88D3B1C9-7B8E-422D-929B-01E1593540BF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{7FDAEFF8-FB2D-4AEA-B407-DE11C9D1B666}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7FDAEFF8-FB2D-4AEA-B407-DE11C9D1B666}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FDAEFF8-FB2D-4AEA-B407-DE11C9D1B666}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
@@ -41,6 +43,10 @@ Global
 		{C9B0D50F-C92A-4243-A39C-3452B1402329}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9B0D50F-C92A-4243-A39C-3452B1402329}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9B0D50F-C92A-4243-A39C-3452B1402329}.Release|Any CPU.Build.0 = Release|Any CPU
+		{866631E8-3824-424B-9A09-6521724814F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{866631E8-3824-424B-9A09-6521724814F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{866631E8-3824-424B-9A09-6521724814F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{866631E8-3824-424B-9A09-6521724814F2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

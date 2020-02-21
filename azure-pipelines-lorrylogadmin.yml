@@ -36,7 +36,7 @@ steps:
     publishWebProjects: false
     projects: '$(project)'    
     arguments: '--output admin_output'
-    modifyOutputPath: true
+    modifyOutputPath: True
     zipAfterPublish: True
 
 - task: AzureRmWebAppDeployment@4
