@@ -1,7 +1,13 @@
 # ASP.NET Core (.NET Framework)
 
 trigger:
-- master
+ branches:
+  include:
+    - master
+ paths:
+  include:
+    - 'LorryLogAdmin/*'
+   
 
 pool:
   vmImage: 'windows-latest'
