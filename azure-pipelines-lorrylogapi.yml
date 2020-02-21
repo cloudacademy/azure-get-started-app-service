@@ -1,0 +1,48 @@
+# ASP.NET Core (.NET Framework)
+
+trigger:
+ branches:
+  include:
+    - master
+ paths:
+  include:
+    - 'LorryLogAPI/*'
+    - 'LorryTests/*'
+   
+
+pool:
+  vmImage: 'windows-2019'
+
+variables:
+  solution: '**/*.sln'
+  project: '**/LorryLogAPI/LorryLogAPI.csproj'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Development'
+
+steps:
+- task: NuGetToolInstaller@1
+
+- task: NuGetCommand@2
+  inputs:
+    restoreSolution: '$(solution)'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
+    projects: '$(project)'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: publish
+    publishWebProjects: false
+    projects: '$(project)'    
+    arguments: '-o ApiOutput'
+    zipAfterPublish: True
+    modifyOutputPath: True
+
+- task: AzureRmWebAppDeployment@4
+  inputs:
+    ConnectionType: 'AzureRM'
+    appType: 'webApp'
+    WebAppName: 'LorryLogAPI'
+    packageForLinux: '$(System.ArtifactStagingDirectory)/**/*.zip'
