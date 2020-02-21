@@ -10,12 +10,11 @@ trigger:
    
 
 pool:
-  vmImage: 'windows-latest'
+  vmImage: 'windows-2019'
 
 variables:
   solution: '**/*.sln'
   project: '**/LorryLogAdmin/LorryLogAdmin.csproj'
-  outputdir: '**/LorryLogAdmin'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Development'
 
@@ -30,6 +29,14 @@ steps:
   inputs:
     command: 'build'
     projects: '$(project)'
-    workingDirectory: '$(outputdir)'
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: publish
+    publishWebProjects: false
+    projects: '$(project)'    
+    arguments: '--output $(Build.ArtifactStagingDirectory)'
+    zipAfterPublish: True
+
 
 
