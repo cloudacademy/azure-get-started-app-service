@@ -36,7 +36,7 @@ steps:
     command: publish
     publishWebProjects: false
     projects: '$(project)'    
-    arguments: '-o ApiOutput'
+    arguments: '--output api_output'
     zipAfterPublish: True
     modifyOutputPath: True
 
@@ -46,4 +46,4 @@ steps:
     azureSubscription: 'LorryLogAdminServiceConnection'
     appType: 'webApp'
     WebAppName: 'LorryLogAPI'
-    packageForLinux: '$(System.ArtifactStagingDirectory)/**/*.zip'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/api_output/*.zip'
