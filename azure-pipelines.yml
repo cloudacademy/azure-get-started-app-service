@@ -29,12 +29,14 @@ steps:
   inputs:
     command: 'build'
     projects: '$(project)'
+    workingDirectory: '$(System.DefaultWorkingDirectory)'
 
 
-- task: AzureWebApp@1
+- task: AzureRmWebAppDeployment@4
   inputs:
+    ConnectionType: 'AzureRM'
     azureSubscription: 'LorryLogAdminServiceConnection'
     appType: 'webApp'
-    appName: 'lorrylogadmin'
-    package: '$(System.DefaultWorkingDirectory)/**/*.zip'
-    deploymentMethod: 'auto'
+    WebAppName: 'lorrylogadmin'
+    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
+
