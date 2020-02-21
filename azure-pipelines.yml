@@ -15,6 +15,7 @@ pool:
 variables:
   solution: '**/*.sln'
   project: '**/LorryLogAdmin/LorryLogAdmin.csproj'
+  outputdir: '**/LorryLogAdmin'
   buildPlatform: 'Any CPU'
   buildConfiguration: 'Development'
 
@@ -29,6 +30,6 @@ steps:
   inputs:
     command: 'build'
     projects: '$(project)'
-    workingDirectory: '$(System.DefaultWorkingDirectory)'
+    workingDirectory: '$(outputdir)'
 
 
