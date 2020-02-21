@@ -43,6 +43,7 @@ steps:
 - task: AzureRmWebAppDeployment@4
   inputs:
     ConnectionType: 'AzureRM'
+    azureSubscription: 'LorryLogAdminServiceConnection'
     appType: 'webApp'
     WebAppName: 'LorryLogAPI'
     packageForLinux: '$(System.ArtifactStagingDirectory)/**/*.zip'
