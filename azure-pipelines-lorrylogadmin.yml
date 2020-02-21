@@ -35,7 +35,7 @@ steps:
     command: publish
     publishWebProjects: false
     projects: '$(project)'    
-    arguments: '--output admin_output'
+    arguments: '--output $(Build.DefaultWorkingDirectory)/admin_output'
     modifyOutputPath: True
     zipAfterPublish: True
 
