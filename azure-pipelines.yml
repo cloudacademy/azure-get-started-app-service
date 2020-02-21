@@ -32,11 +32,3 @@ steps:
     workingDirectory: '$(System.DefaultWorkingDirectory)'
 
 
-- task: AzureRmWebAppDeployment@4
-  inputs:
-    ConnectionType: 'AzureRM'
-    azureSubscription: 'LorryLogAdminServiceConnection'
-    appType: 'webApp'
-    WebAppName: 'lorrylogadmin'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
-
