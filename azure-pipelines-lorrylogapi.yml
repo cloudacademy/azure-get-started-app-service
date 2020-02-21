@@ -7,6 +7,7 @@ trigger:
  paths:
   include:
     - 'LorryLogAPI/*'
+    - 'LorryTests/*'
    
 
 pool:
@@ -32,6 +33,12 @@ steps:
 
 - task: DotNetCoreCLI@2
   inputs:
+    command: 'test'
+    projects: '**/LorryTests/LorryTests.csproj'
+    testRunTitle: 'LorryLogAPITests'
+
+- task: DotNetCoreCLI@2
+  inputs:
     command: publish
     publishWebProjects: false
     projects: '$(project)'    
@@ -41,7 +48,6 @@ steps:
 - task: AzureRmWebAppDeployment@4
   inputs:
     ConnectionType: 'AzureRM'
-    azureSubscription: 'LorryLogAdminServiceConnection'
     appType: 'webApp'
-    WebAppName: 'lorrylogadmin'
-    packageForLinux: '$(Build.ArtifactStagingDirectory)/**/*.zip'
+    WebAppName: 'LorryLogAPI'
+    packageForLinux: '$(System.ArtifactStagingDirectory)/**/*.zip'
