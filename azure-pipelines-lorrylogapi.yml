@@ -33,17 +33,12 @@ steps:
 
 - task: DotNetCoreCLI@2
   inputs:
-    command: 'test'
-    projects: '**/LorryTests/LorryTests.csproj'
-    testRunTitle: 'LorryLogAPITests'
-
-- task: DotNetCoreCLI@2
-  inputs:
     command: publish
     publishWebProjects: false
     projects: '$(project)'    
-    arguments: '--output $(Build.ArtifactStagingDirectory)'
+    arguments: '-o ApiOutput'
     zipAfterPublish: True
+    modifyOutputPath: True
 
 - task: AzureRmWebAppDeployment@4
   inputs:
