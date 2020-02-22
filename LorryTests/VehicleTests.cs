@@ -29,7 +29,6 @@ namespace LorryTests
                 .AddEnvironmentVariables();
             _configuration = builder.Build();
 
-
             string connStr =_configuration.GetConnectionString("LorryLogAPIContext");
             string testData = _configuration.GetSection("TestFiles")["vehicle"];
 

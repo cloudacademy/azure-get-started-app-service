@@ -13,8 +13,8 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\LorryLogAPI\LorryLogAPI.csproj" />
     <ProjectReference Include="..\LorryModels\LorryModels.csproj" />
-    <ProjectReference Include="..\TrackAPI\LorryLogAPI.csproj" />
   </ItemGroup>
 
   <ItemGroup>
