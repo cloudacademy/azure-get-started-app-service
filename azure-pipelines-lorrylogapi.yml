@@ -17,7 +17,7 @@ variables:
   solution: '**/*.sln'
   project: '**/LorryLogAPI/LorryLogAPI.csproj'
   buildPlatform: 'Any CPU'
-  buildConfiguration: 'Development'
+  buildConfiguration: 'Debug'
 
 steps:
 - task: NuGetToolInstaller@1
@@ -31,6 +31,7 @@ steps:
     command: 'build'
     projects: '$(project)'
 
+
 - task: DotNetCoreCLI@2
   inputs:
     command: publish
@@ -39,6 +40,12 @@ steps:
     arguments: '--output api_output'
     zipAfterPublish: True
     modifyOutputPath: True
+
+- task: DotNetCoreCLI@2
+  inputs:
+    command: test
+    projects: '**/LorryTests/LorryTests.csproj'
+    arguments: '--configuration $(buildConfiguration)'    
 
 - task: AzureRmWebAppDeployment@4
   inputs:
