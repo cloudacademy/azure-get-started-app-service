@@ -31,6 +31,7 @@ steps:
     command: 'build'
     projects: '$(project)'
 
+
 - task: DotNetCoreCLI@2
   inputs:
     command: publish
@@ -39,6 +40,8 @@ steps:
     arguments: '--output api_output'
     zipAfterPublish: True
     modifyOutputPath: True
+
+
 
 - task: AzureRmWebAppDeployment@4
   inputs:
