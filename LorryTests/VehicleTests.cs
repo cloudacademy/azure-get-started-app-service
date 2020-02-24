@@ -9,6 +9,7 @@ using System.Text.Json;
 using System;
 using LorryLogAPI.Data;
 using Microsoft.EntityFrameworkCore;
+//using Microsoft.EntityFrameworkCore.InMemory;
 using System.Threading.Tasks;
 
 namespace LorryTests
@@ -29,12 +30,16 @@ namespace LorryTests
                 .AddEnvironmentVariables();
             _configuration = builder.Build();
 
-            string connStr =_configuration.GetConnectionString("LorryLogAPIContext");
+            //string connStr =_configuration.GetConnectionString("LorryLogAPIContext");
             string testData = _configuration.GetSection("TestFiles")["vehicle"];
 
+            //var options = new DbContextOptionsBuilder<LorryLogAPIContext>()
+            //       .UseSqlServer(connStr)
+            //       .Options;
+
             var options = new DbContextOptionsBuilder<LorryLogAPIContext>()
-                   .UseSqlServer(connStr)
-                   .Options;
+                    .UseInMemoryDatabase(databaseName: "LorryLog")
+                    .Options;
 
             _context = new LorryLogAPIContext(options);
             _controller = new VehiclesController(_context);

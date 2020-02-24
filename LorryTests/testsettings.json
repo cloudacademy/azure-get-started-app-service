@@ -1,6 +1,7 @@
 {
   "ConnectionStrings": {
-    "LorryLogAPIContext": "Server=lorrylogapidbserver.database.windows.net;Database=LorryLog;User ID=lorries;Password=14mreally4Truck;MultipleActiveResultSets=true"
+    "LorryLogAPIContext": "Server=lorrylogapidbserver.database.windows.net;Database=LorryLog;User ID=lorries;Password=14mreally4Truck;MultipleActiveResultSets=true",
+    "InMemory": "Server=(localdb)\\mssqllocaldb;Database=EFProviders.InMemory;Trusted_Connection=True;ConnectRetryCount=0"
   },
   "TestFiles": {
     "vehicle": "\\Debug\\netcoreapp3.1\\Data\\vehicle.json"
