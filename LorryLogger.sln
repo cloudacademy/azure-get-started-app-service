@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LorryModels", "LorryModels\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LorryTests", "LorryTests\LorryTests.csproj", "{18C6FF4F-32EB-4745-AE6F-270DDA6BDED2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LorryLogAdmin", "LorryLogAdmin\LorryLogAdmin.csproj", "{C9B0D50F-C92A-4243-A39C-3452B1402329}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LorryLogAPI", "LorryLogAPI\LorryLogAPI.csproj", "{866631E8-3824-424B-9A09-6521724814F2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B820AD94-F511-49C3-A6C6-385856D905D8}"
@@ -18,6 +16,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		azure-pipelines-lorrylogadmin.yml = azure-pipelines-lorrylogadmin.yml
 		azure-pipelines-lorrylogapi.yml = azure-pipelines-lorrylogapi.yml
 	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LorryLogAdmin", "LorryLogAdmin\LorryLogAdmin.csproj", "{CCC8776A-C7B7-4366-B63C-D4E5E54664FE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,14 +39,14 @@ Global
 		{18C6FF4F-32EB-4745-AE6F-270DDA6BDED2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18C6FF4F-32EB-4745-AE6F-270DDA6BDED2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18C6FF4F-32EB-4745-AE6F-270DDA6BDED2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C9B0D50F-C92A-4243-A39C-3452B1402329}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C9B0D50F-C92A-4243-A39C-3452B1402329}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C9B0D50F-C92A-4243-A39C-3452B1402329}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C9B0D50F-C92A-4243-A39C-3452B1402329}.Release|Any CPU.Build.0 = Release|Any CPU
 		{866631E8-3824-424B-9A09-6521724814F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{866631E8-3824-424B-9A09-6521724814F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{866631E8-3824-424B-9A09-6521724814F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{866631E8-3824-424B-9A09-6521724814F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCC8776A-C7B7-4366-B63C-D4E5E54664FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCC8776A-C7B7-4366-B63C-D4E5E54664FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCC8776A-C7B7-4366-B63C-D4E5E54664FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCC8776A-C7B7-4366-B63C-D4E5E54664FE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

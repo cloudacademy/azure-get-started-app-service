@@ -11,10 +11,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
-using LorryLogAPI.Data;
-using System.Text.Json;
+using LorryMobileAPI.Data;
 
-namespace LorryLogAPI
+namespace LorryMobileAPI
 {
     public class Startup
     {
@@ -25,12 +24,16 @@ namespace LorryLogAPI
 
         public IConfiguration Configuration { get; }
 
+        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            services.AddDbContext<LorryLogAPIContext>(options =>
+
+            services.AddDbContext<LorryMobileAPIContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("LorryLogAPIContext")));
         }
+
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
@@ -42,7 +45,7 @@ namespace LorryLogAPI
 
             app.UseRouting();
 
-            //app.UseAuthorization();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

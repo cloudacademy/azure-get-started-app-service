@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="LorryMobile.Views.NewItemPage"
+             Title="New Pickup">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" />
+        <ToolbarItem Text="Save" Clicked="Save_Clicked" />
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <StackLayout Spacing="20" Padding="15">
+            <Label Text="Barcode" FontSize="Medium" />
+            <Entry Text="{Binding Item.Barcode}" Placeholder="Barcode" FontSize="Small" />
+            <Label Text="From Address" FontSize="Medium" />
+            <Editor Text="{Binding Item.FromAddress}" Placeholder="Pickup address" FontSize="Small" Margin="0" />
+            <Label Text="Picked up" FontSize="Medium" />
+            <DatePicker x:Name="PickupDate" Date="{Binding Item.PickedUp}" FontSize="Small" Margin="0" />
+            <TimePicker x:Name="PickupTime" Time="{Binding Item.PickedUp}" FontSize="Small" Margin="0" />
+            <Label Text="Signature required" FontSize="Medium" />
+            <CheckBox IsChecked="{Binding Item.SignatureRequired}" Margin="0" />
+        </StackLayout>
+    </ContentPage.Content>
+    
+</ContentPage>
