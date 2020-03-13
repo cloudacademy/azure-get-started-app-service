@@ -51,7 +51,6 @@ namespace LorryLogAPI.Controllers
             {
                 return NotFound();
             }
-
             return vehicle;
         }
 

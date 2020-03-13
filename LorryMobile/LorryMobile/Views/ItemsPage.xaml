@@ -13,6 +13,11 @@
     </ContentPage.ToolbarItems>
 
     <StackLayout>
+        <ActivityIndicator HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       IsVisible="False"
+                       IsEnabled="True"
+                       x:Name="syncIndicator"/>
         <ListView x:Name="ItemsListView"
                 ItemsSource="{Binding Items}"
                 VerticalOptions="FillAndExpand"

@@ -14,6 +14,7 @@ namespace LorryModels
         public DateTime? Delivered { get; set; }
         public string Barcode { get; set; }
 
+
         public Pickup()
         {            
         }

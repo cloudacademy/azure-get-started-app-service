@@ -25,6 +25,7 @@ namespace LorryMobile.Views
             InitializeComponent();
 
             BindingContext = viewModel = new ItemsViewModel();
+            viewModel.Indicator = syncIndicator;
         }
 
         async void OnItemSelected(object sender, SelectedItemChangedEventArgs args)

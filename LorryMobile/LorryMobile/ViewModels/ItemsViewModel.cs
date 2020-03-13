@@ -7,6 +7,7 @@ using Xamarin.Forms;
 
 using LorryModels;
 using LorryMobile.Views;
+using LorryMobile.Data;
 
 namespace LorryMobile.ViewModels
 {
@@ -15,11 +16,14 @@ namespace LorryMobile.ViewModels
         public ObservableCollection<Pickup> Items { get; set; }
         public Command LoadItemsCommand { get; set; }
 
+        public ActivityIndicator Indicator { get; set; }
+
         public ItemsViewModel()
         {
             Title = "Pickups";
             Items = new ObservableCollection<Pickup>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
+
 
             MessagingCenter.Subscribe<NewItemPage, Pickup>(this, "AddItem", async (obj, item) =>
             {

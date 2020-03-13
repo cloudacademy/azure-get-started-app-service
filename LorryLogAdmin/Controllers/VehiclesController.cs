@@ -46,6 +46,10 @@ namespace LorryLogAdmin.Controllers
             {
                 return NotFound();
             }
+            else
+            {
+                vehicle.Model = _configuration.GetValue<string>("Model_App_Setting");
+            }
 
             return View(vehicle);
         }

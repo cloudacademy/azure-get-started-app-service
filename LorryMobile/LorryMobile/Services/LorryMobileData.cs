@@ -4,6 +4,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using LorryMobile.Models;
 using LorryModels;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
@@ -12,7 +13,6 @@ namespace LorryMobile.Services
 {
     public class LorryMobileData : IDataStore<Pickup>
     {
-        private string _apiUrl = "https://lorrymobileapi.azurewebsites.net/";
         readonly List<Pickup> items;
         private HttpClient client;
 
@@ -21,20 +21,11 @@ namespace LorryMobile.Services
             client = new HttpClient();
             client.MaxResponseContentBufferSize = 256000;
             client.DefaultRequestHeaders.Accept.Add(new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/x-www-form-urlencoded"));
-
-            items = new List<Pickup>()           
-            {
-                new Pickup(1, "21 The Terrace, Tamahere RD3, Hamilton 3283", "7 Oak Street, Rotal Oak, Auckland", true, null, null, "2342434"),
-                new Pickup(2, "Cambridge", "Amazon Returns, Las Vegas, NV 89030", false, null, null, "188872")
-            };
         }
-
 
         public async Task<T> GetReponse<T>(string _apiUrl) where T : class
         {
             List<string> errors = new List<string>();
-            //var token = App.TokenDb.Get();
-            //client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token.access_token);
             try
             {
                 var response = await client.GetAsync(_apiUrl);
@@ -91,15 +82,13 @@ namespace LorryMobile.Services
             return null;
         }
 
-
         public async Task<bool> AddItemAsync(Pickup item)
         {
             items.Add(item);
-            string apiurl = $"{_apiUrl}pickups/create";
+            string apiurl = $"{Constants.ApiURL}pickups/create";
             string json = JsonConvert.SerializeObject(item);
             Pickup pu = await PostResponse<Pickup>(apiurl, json);
             return true;
-            //return await Task.FromResult(true);
         }
 
         public async Task<bool> UpdateItemAsync(Pickup item)
@@ -127,7 +116,7 @@ namespace LorryMobile.Services
         public async Task<IEnumerable<Pickup>> GetItemsAsync(bool forceRefresh = false)
         {
             List<Pickup> pickups = null;
-            string apiurl = $"{_apiUrl}pickups";
+            string apiurl = $"{Constants.ApiURL}pickups";
             pickups = await GetReponse<List<Pickup>>(apiurl);
             return pickups;
         }

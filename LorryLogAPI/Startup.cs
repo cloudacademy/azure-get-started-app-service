@@ -12,7 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using LorryLogAPI.Data;
-using System.Text.Json;
+using Microsoft.OpenApi.Models;
 
 namespace LorryLogAPI
 {
@@ -30,9 +30,20 @@ namespace LorryLogAPI
             services.AddControllers();
             services.AddDbContext<LorryLogAPIContext>(options =>
                     options.UseSqlServer(Configuration.GetConnectionString("LorryLogAPIContext")));
+            services.AddSwaggerGen((options) => 
+            {
+                options.SwaggerDoc("v1", new OpenApiInfo { Title = "LorryLog API", Version = "v1" }); 
+            });
+
         }
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "LorryLog API V1");
+            });
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
