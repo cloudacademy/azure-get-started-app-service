@@ -21,7 +21,7 @@
     "LorryLogAPI": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "weatherforecast",
+      "launchUrl": "vehicles",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
