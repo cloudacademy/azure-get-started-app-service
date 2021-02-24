@@ -56,7 +56,6 @@ namespace LorryLogAPI.Controllers
 
         // PUT: api/Vehicles/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
-        // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPut("updatevehicle/{id}")]
         public async Task<IActionResult> PutVehicle(int id, Vehicle vehicle)
         {
