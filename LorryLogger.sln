@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29709.97
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "LorryLog", "LorryLog\LorryLog.sqlproj", "{7FDAEFF8-FB2D-4AEA-B407-DE11C9D1B666}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LorryModels", "LorryModels\LorryModels.csproj", "{BDBC659F-2ED1-4489-A56D-C6209444BE78}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LorryTests", "LorryTests\LorryTests.csproj", "{18C6FF4F-32EB-4745-AE6F-270DDA6BDED2}"
@@ -23,11 +21,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LorryLogAPIAuth", "LorryLog
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LorryMobileAPI", "LorryMobileAPI\LorryMobileAPI.csproj", "{F2E8603C-8063-4719-A7A1-3BEFD5FAC133}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LorryMobile", "LorryMobile\LorryMobile\LorryMobile.csproj", "{DD6FA95D-D257-4730-BA18-D9F88F1365EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DockerApp", "DockerApp\DockerApp.csproj", "{53D75FC3-6350-4731-B066-343AD929F418}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LorryMobile.Android", "LorryMobile\LorryMobile.Android\LorryMobile.Android.csproj", "{A9ADE1DC-66D1-4035-868B-FDC39A875A58}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DockerApp", "DockerApp\DockerApp.csproj", "{53D75FC3-6350-4731-B066-343AD929F418}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SqlScripts", "SqlScripts", "{F131C80D-68F1-4755-B0E0-FD6682894482}"
+	ProjectSection(SolutionItems) = preProject
+		Pickup.sql = Pickup.sql
+		Vehicle.sql = Vehicle.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,12 +35,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7FDAEFF8-FB2D-4AEA-B407-DE11C9D1B666}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7FDAEFF8-FB2D-4AEA-B407-DE11C9D1B666}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7FDAEFF8-FB2D-4AEA-B407-DE11C9D1B666}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{7FDAEFF8-FB2D-4AEA-B407-DE11C9D1B666}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7FDAEFF8-FB2D-4AEA-B407-DE11C9D1B666}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7FDAEFF8-FB2D-4AEA-B407-DE11C9D1B666}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{BDBC659F-2ED1-4489-A56D-C6209444BE78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BDBC659F-2ED1-4489-A56D-C6209444BE78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDBC659F-2ED1-4489-A56D-C6209444BE78}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -65,16 +59,6 @@ Global
 		{F2E8603C-8063-4719-A7A1-3BEFD5FAC133}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F2E8603C-8063-4719-A7A1-3BEFD5FAC133}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F2E8603C-8063-4719-A7A1-3BEFD5FAC133}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DD6FA95D-D257-4730-BA18-D9F88F1365EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DD6FA95D-D257-4730-BA18-D9F88F1365EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DD6FA95D-D257-4730-BA18-D9F88F1365EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DD6FA95D-D257-4730-BA18-D9F88F1365EB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A9ADE1DC-66D1-4035-868B-FDC39A875A58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A9ADE1DC-66D1-4035-868B-FDC39A875A58}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A9ADE1DC-66D1-4035-868B-FDC39A875A58}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{A9ADE1DC-66D1-4035-868B-FDC39A875A58}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A9ADE1DC-66D1-4035-868B-FDC39A875A58}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A9ADE1DC-66D1-4035-868B-FDC39A875A58}.Release|Any CPU.Deploy.0 = Release|Any CPU
 		{53D75FC3-6350-4731-B066-343AD929F418}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{53D75FC3-6350-4731-B066-343AD929F418}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53D75FC3-6350-4731-B066-343AD929F418}.Release|Any CPU.ActiveCfg = Release|Any CPU
